@@ -29,10 +29,9 @@ import { DataTablePagination } from "./data-table-pagination"
 import { DataTableToolbar } from "./data-table-toolbar"
 
 import { useAppDispatch, useAppSelector } from '../../lib/hooks';
-import { RootState } from '../../lib/store';
 import { useEffect } from 'react';
 
-import { TTask, addTasks, removeTask, toggleFavorite, cloneTask, updateTitle } from '../../lib/features/task/taskSlice';
+import { addTasks } from '../../lib/features/task/taskSlice';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]

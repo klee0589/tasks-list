@@ -34,17 +34,9 @@ export function DataTableRowActions<TData>({
   row,
 }: DataTableRowActionsProps<TData>) {
   const task = taskSchema.parse(row.original)
-  // const todos = useAppSelector((state: RootState) => state.tasks.list);
-
   const { id }: any = row.original;
-  // const [newTitle, setNewTitle] = useState<string>(title);
+  const [newTitle, setNewTitle] = useState<string>('');
   const dispatch = useAppDispatch();
-
-  // useEffect(() => {
-  //   if (row) {
-  //     dispatch(addTasks([row.original]))
-  //   }
-  // }, [])
 
   const clickHandler = ({ type }: { type: string }) => {
 
